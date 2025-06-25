@@ -1,0 +1,15 @@
+[
+  {
+    "analysis_type": "web_log_analysis",
+    "start_time": 1750787557.1003845,
+    "end_time": 1750787657.1003845,
+    "processing_time": 15.5,
+    "input_size": 50000,
+    "output_size": 2000,
+    "chunks_used": 3,
+    "optimization_used": true,
+    "from_cache": false,
+    "success": true,
+    "error_message": null
+  }
+]
