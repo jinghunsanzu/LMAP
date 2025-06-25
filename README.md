@@ -62,25 +62,25 @@ python app.py
 
 
 解码功能
-![1](E:\LMAP\DM-img\1.png)
+![](./logs/1.png)
 
 webshell检测
-
+![](./logs/5.png)
 
 流量分析功能
 
 ![](./logs/1.png)
 
 进程分析
-
+![](./logs/8.png)
 
 
 web日志分析
-
+![](./logs/web.png)
 
 
 正则表达式生成器
-
+![](./logs/zz.png)
 
 
 ## 版本修改
