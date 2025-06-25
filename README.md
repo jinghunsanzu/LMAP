@@ -69,7 +69,7 @@ webshell检测
 
 流量分析功能
 
-![1](E:\LMAP\DM-img\1.png)
+![](./logs/1.png)
 
 进程分析
 
