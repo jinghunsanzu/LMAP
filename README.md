@@ -1,18 +1,6 @@
-# 基于DeepSeekSelfTool项目进行重构的flask安全分析平台
+# 基于Flask-DeepSeekSelfTool项目进行重构的flask安全分析平台
 
-代码qt5版本来源于：https://github.com/ChinaRan0/DeepSeekSelfTool
-
-原版本来源于：知攻善防实验室公众号
-
-基于此版本，哥们先重构成flask运行，可以移植到更多的地方进行利用和学习。
-
-本项目仅供学习，请勿有任何二次封装盈利的行为，具体行为规范查看原project和知攻善防实验室公众号
-
-## 为什么要多此一举？
-- 因为大伙（单指我）比较了解css等等，所以可以很轻松的自行改字号、颜色等
-- html修改比较快速，可以直接按照样例继续写入你需要的功能
-- 封装成一个后端平台可以轻松接入网站等地方，可能未来的我需要，所以就搞了这个重构
-- 还是那句话，现在AI就是生产力工具
+- 根据[FoLaJJ/Flask-DeepSeekSelfTool: flask重构的deepseek安全分析平台，原版本位于https://github.com/ChinaRan0/DeepSeekSelfTool](https://github.com/FoLaJJ/Flask-DeepSeekSelfTool?tab=readme-ov-file)老哥进行修改的系统。未来计划新增主机基线功能与主机日志分析功能。并且将会进行再次重构。
 
 
 ## 具体功能
@@ -22,35 +10,24 @@
 
 tips：
 - 线上 api 模型推荐 DeepSeekV3 （不要使用 R1 推理模型，会有多余的输出且非常慢。）
-- 且勿提交过长token的文本
+- 且勿提交过长token的文本或者过长的日志。
+- 正在开发的功能：
+  - 主机日志分析
+- 目前实现的功能有：
+  - 流量分析
+  - JS审计
+  - 进程分析
+  - 正则生成
+  - WebShell检测
+  - Web日志分析
 ## 🚀 快速开始
 
-### 免配置启动（推荐）
-
-**🐳 Docker 一键启动：**
-```bash
-# Windows 用户
-start.bat
-
-# Linux/Mac 用户
-./start.sh
-```
-
-**📦 可执行文件：**
-```bash
-# 构建可执行文件
-build_exe.bat  # Windows
-
-# 运行
-dist/DeepSeekTool.exe
-```
-
-### 传统部署方式
+### 部署方式
 
 ### 1. 克隆项目
 ```bash
-git clone https://github.com/FoLaJJ/Flask-DeepSeekSelfTool.git
-cd Flask-DeepSeekSelfTool
+git clone https://github.com/jinghunsanzu/LMAP.git
+cd LMAP
 ```
 
 ### 2. 安装依赖
@@ -78,54 +55,38 @@ python app.py
 
 访问 `http://localhost:5000` 开始使用。
 
-> 💡 **提示**: 推荐使用Docker方式部署，无需配置Python环境，详见 [部署指南](DEPLOYMENT.md)
-
-## 运行应用
-
-1. 启动Flask应用：
-```bash
-python app.py
-```
-
-2. 在浏览器中访问：
-```
-http://localhost:5000
-```
-
 ## 重构页面
-计算token，其中参考了官方模型的大致计算方法
-![](MD-PNG/官方模型token用量计算.png)
 
-具体效果
-![](MD-PNG/token计算演示.png)
 
-浅色主题
-![](MD-PNG/浅色主题.png)
 
-深色主题
-![](MD-PNG/深色主题.png)
 
-一个等待功能
-![](MD-PNG/等待环节.png)
 
 解码功能
-![](MD-PNG/解码功能.png)
-
-写报告
-![](MD-PNG/写报告.png)
+![1](E:\LMAP\DM-img\1.png)
 
 webshell检测
-![](MD-PNG/webshell.png)
 
-正常流量
-![](MD-PNG/正常流量.png)
+
+流量分析功能
+
+![1](E:\LMAP\DM-img\1.png)
+
+进程分析
+
+
+
+web日志分析
+
+
+
+正则表达式生成器
 
 
 
 ## 版本修改
-- 2025.3.17 重构项目，增加响应
-- 2025.3.18 增加本地粗略计算token数量的js（可自定义）
-- 2025.4.8 增加对openrouter的支持
+- 2025.6.17 重构项目
+- 2025.6.18 重构整个HTML界面
+- 2025.6.22 增加web日志分析功能。并且可对话
 
 ## 许可证
 
