@@ -46,7 +46,7 @@ class LoggingConfig:
 @dataclass
 class ServerConfig:
     """服务器配置数据类"""
-    host: str = '127.0.0.1'
+    host: str = '0.0.0.0'
     port: int = 5000
     debug: bool = False
 
@@ -99,7 +99,7 @@ max_size = 10MB
 backup_count = 5
 
 [server]
-host = 127.0.0.1
+host = 0.0.0.0
 port = 5000
 debug = false
 """
